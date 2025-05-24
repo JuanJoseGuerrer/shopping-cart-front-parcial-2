@@ -63,3 +63,15 @@ function alert(alertType, message){
     `
     document.getElementById('alert').innerHTML = alert
  }
+
+
+  const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        return;
+      }
+      window.location.href = 'dashboard.html';
+    });
